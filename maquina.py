@@ -8,8 +8,6 @@ import os
 tipo_img = ['jpg','jpeg', 'png']
 tipo_video = ['mp4','avi']
 resultado = []
-
-
 dir_path = 'arquivos'
 arquivos = os.listdir(dir_path)
 methods = ['cv2.TM_CCOEFF_NORMED']
@@ -65,7 +63,6 @@ def busca_img(arquivo, similaridade_minima):
   return [similaridade_maxima, arquivo]
 # fim funcao que realiza busca em imagens -----------------
 
-
 # inicio funcao que de inicializacao da maquina de busca --
 def maquina_busca(similaridade_minima, qtd_obj):
   for arquivo in arquivos:
@@ -88,7 +85,6 @@ def maquina_busca(similaridade_minima, qtd_obj):
       print(str(i+1) + 'º - arquivo: ' + resultado_ordenado[i][1] + ' | Similaridade = ' +  str(resultado_ordenado[i][0]) + '%')
     i+=1
 # fim funcao que de inicializacao da maquina de busca --
-
 
 sim_minima = float(input('Informe a similaridade minima: '))
 qt_obj = int(input('Informe a quantidade máxima de objetos a serem retornados: '))
